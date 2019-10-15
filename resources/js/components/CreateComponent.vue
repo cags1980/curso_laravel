@@ -34,7 +34,9 @@
     },
     methods: {
       addPost(){
-        let uri = 'http://vuelaravelcrud.test/api/post/create';
+        console.log('prueba');
+        console.log(this.post);
+        let uri = 'http://vue_crud.local/api/post/create';
         this.axios.post(uri, this.post).then((response) => {
           this.$router.push({name: 'posts'});
         });

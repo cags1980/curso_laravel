@@ -38,7 +38,7 @@
         }
       },
       created() {
-      let uri = 'http://vuelaravelcrud.test/api/posts';
+      let uri = 'http://vue_crud.local/api/posts';
       this.axios.get(uri).then(response => {
         this.posts = response.data.data;
       });
@@ -46,7 +46,7 @@
     methods: {
       deletePost(id)
       {
-        let uri = `http://vuelaravelcrud.test/api/post/delete/${id}`;
+        let uri = `http://vue_crud.local/api/post/delete/${id}`;
         this.axios.delete(uri).then(response => {
           this.posts.splice(this.posts.indexOf(id), 1);
         });
